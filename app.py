@@ -2,6 +2,10 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS,cross_origin
 import pickle
 import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import  r2_score
 
 app=Flask(__name__) #initializing the flask app
 @app.route('/', methods=['GET'])#route to display the home page
